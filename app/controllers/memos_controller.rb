@@ -7,4 +7,14 @@ class MemosController < ApplicationController
     @memo = Memo.new
   end
 
+  def create
+    Memo.create(memo_params)
+  end
+
+  private
+  def memo_params
+    # params.require(:memo).permit(:name, :image, :text)
+    params.require(:memo).permit(:name, :text)
+  end
+
 end
