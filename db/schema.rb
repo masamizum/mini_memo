@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2021_10_17_134321) do
   create_table "memos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "text"
+    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
