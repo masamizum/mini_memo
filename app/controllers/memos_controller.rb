@@ -16,6 +16,10 @@ class MemosController < ApplicationController
     memo.destroy
   end
 
+  def edit
+    @memo = Memo.find(params[:id])
+  end
+
   private
   def memo_params
     params.require(:memo).permit(:name, :image, :text)
