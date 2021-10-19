@@ -1,10 +1,14 @@
 <div class="contents row">
   <% @memos.each do |memo| %>
-    <div class="content_post" style="background-image: url(<%= memo.image %>);">
-      <p><%= memo.text %></p>
+      <%# <div class="content_post" style="background-image: url(<%#= memo.image %>  <%# );"> %>
       <span class="name">
         <%= memo.name %>
       </span>
-    </div>
+      <p><%= memo.text %></p>
+
+      <%#</div> %>
+
   <% end %>
 </div>
+
+
