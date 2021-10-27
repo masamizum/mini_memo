@@ -25,6 +25,10 @@ class MemosController < ApplicationController
     memo.update(memo_params)
   end
 
+  def show
+    @memo = Memo.find(params[:id])
+  end
+
   private
   def memo_params
     params.require(:memo).permit(:name, :image, :text)
