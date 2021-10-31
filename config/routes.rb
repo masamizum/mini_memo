@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :memos 
     #onlyオプションの削除 ７つのアクションをまとめている。
     #, only: [:index, :new, :create, :destroy, :edit, :update, :show]
-
+    resources :memos do
+      resources :comments, only: :create
+    end
     #/users/:idのパスでリクエストした際にusers_controller.rbのshowアクションを実行するルーティングが設定できました。
     resources  :users, only: :show 
 
