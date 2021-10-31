@@ -4,10 +4,10 @@
       <span><%= image_tag 'arrow_top.png' %></span>
       <ul class="more_list">
         <li>
-          <%= link_to '編集', edit_memo_path(@memo.id), method: :get %>
+          <%= link_to 'edit', edit_memo_path(@memo.id), method: :get %>
         </li>
         <li>
-          <%= link_to '削除', memo_path(@memo.id), method: :delete %>
+          <%= link_to 'del', memo_path(@memo.id), method: :delete %>
         </li>
       </ul>
     </div>

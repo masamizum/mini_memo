@@ -5,14 +5,16 @@
         <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">
           <li>
-            <%= link_to '詳細', memo_path(memo.id), method: :get %>
+            <%= link_to 'detail', memo_path(memo.id), method: :get %>
           </li>
-          <li>
-            <%= link_to '編集', edit_memo_path(memo.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', memo_path(memo.id), method: :delete %>
-          </li>
+          <% if user_signed_in? && current_user.id == tweet.user_id %>
+            <li>
+              <%= link_to 'edit', edit_memo_path(memo.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to 'del', memo_path(memo.id), method: :delete %>
+            </li>
+          <% end %>
         </ul>
       </div>
       <pre><%= memo.text %></pre>
@@ -20,6 +22,7 @@
         <a href="">
         <%#  <span> %>
         <%#= memo.user.nickname %><%# 作成</span> %>
+        <p><%= memo.user.nickname %> 作成</p>
 
         </a>
         <%= memo.name %>

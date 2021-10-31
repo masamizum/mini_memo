@@ -3,7 +3,7 @@
   <% @memos.each do |memo| %>
     <div class="content_post" style="background-image: url(<%= memo.image %>);">
       <pre><%= memo.text %></pre>
-      <span class="name"><%= memo.name %></span>
+      <span class="name"><%= memo.name %></span> <%#pictweetではこの行を削除している%>
     </div>
   <% end %>
 </div>
