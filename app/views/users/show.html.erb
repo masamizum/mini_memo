@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nickname %>さんのmemo一覧</p>
+  <% @memos.each do |memo| %>
+    <div class="content_post" style="background-image: url(<%= memo.image %>);">
+      <pre><%= memo.text %></pre>
+      <span class="name"><%= memo.name %></span>
+    </div>
+  <% end %>
+</div>
