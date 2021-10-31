@@ -3,7 +3,7 @@ class MemosController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @memos = Memo.all
+    @memos = Memo.includes(:user)
   end
 
   def new
