@@ -6,4 +6,8 @@ Rails.application.routes.draw do
     #onlyオプションの削除 ７つのアクションをまとめている。
     #, only: [:index, :new, :create, :destroy, :edit, :update, :show]
 
+    #/users/:idのパスでリクエストした際にusers_controller.rbのshowアクションを実行するルーティングが設定できました。
+    resources  :users, only: :show 
+
+
 end
