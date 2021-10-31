@@ -865,7 +865,7 @@ div.contents.row div.content_post {
 /*ボックスの高さ*/
   height: 340px;
 /*文字の色 #fffから#000に書き換え*/
-  color: #000;
+  color: #333;
   background-size: cover;
   background-position: center center;
   border-radius: 3px;
@@ -942,13 +942,12 @@ div.contents.row div.content_post .more ul.more_list li a:hover {
 }
 
 /*メモの書かれてある位置*/
-/* div.contents.row div.content_post p { */
 div.contents.row div.content_post p {
-    position: absolute;
-  left: 50px;
+  position: absolute;
+  left: 150px;
 /*  right: 100px;
   bottom: 30px; */
-  top: 70px;
+  top: 100px;
   margin: 0;
 /*  font-size: 20px; */
   font-size: 16px;
@@ -956,6 +955,7 @@ div.contents.row div.content_post p {
 /*  font-weight: bold; */
   /*テキストの影
   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000; */
+  /*color: #ff0000;     文字色指定 */
 }
 
 /*名前の書かれてある位置 メモのタイトルとする*/
@@ -964,11 +964,12 @@ div.contents.row div.content_post span.name {
 /*  right: 30px; */
   left: 30px;
 /*  bottom: 30px; */
-  top: 30px;
+  top: 16px;
   z-index: 2;
 /*  font-size: 13px; */
   font-size: 20px;
   font-weight: bold;
+  text-decoration:underline;/*下線を引く*/
 
 }
 
