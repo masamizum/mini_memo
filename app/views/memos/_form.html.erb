@@ -1,0 +1,6 @@
+    <%= form_with(model: memo, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "Name" %> <%#この行は、ほんとは消しておく%>
+      <%= form.text_field :image, placeholder: "Image Url" %>
+      <%= form.text_area :text, placeholder: "text", rows: "10" %>
+      <%= form.submit "send" %>
+    <% end %>
