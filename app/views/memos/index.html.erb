@@ -1,34 +1,5 @@
 <div class="contents row">
   <% @memos.each do |memo| %>
-    <div class="content_post" style="background-image: url(<%= memo.image %>);">
-      <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-          <li>
-            <%= link_to 'detail', memo_path(memo.id), method: :get %>
-          </li>
-          <% if user_signed_in? && current_user.id == memo.user_id %>
-            <li>
-              <%= link_to 'edit', edit_memo_path(memo.id), method: :get %>
-            </li>
-            <li>
-              <%= link_to 'del', memo_path(memo.id), method: :delete %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-      <pre><%= memo.text %></pre>
-      <span class="name">
-        <a href="">
-        <%#  <span> %>
-        <%#= memo.user.nickname %><%# 作成</span> %>
-        <p><%= memo.user.nickname %> 作成</p>
-
-        </a>
-        <%= memo.name %>
-      </span>
-
-    </div>
   <% end %>
 </div>
 
