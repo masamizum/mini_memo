@@ -3,7 +3,7 @@ class MemosController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @memos = Memo.includes(:user)
+    @memos = Memo.includes(:user).order("created_at DESC")
   end
 
   def new
